@@ -1,15 +1,21 @@
-import java.util.ArrayList;
 public class RegistroStudenti {
-    private ArrayList<Studente> studenti;
+    private Studente[] studenti;
+    private int numeroStudenti; //quanti studenti ci sono
     public RegistroStudenti() {
-        studenti = new ArrayList<>();
+        studenti = new Studente[10];
+        int numeroStudenti= 0;
     }
     public void aggiungiStudente(Studente studente) {
-        studenti.add(studente);
+       if (numeroStudenti < studenti.length) {
+        studenti[numeroStudenti] = studente;
+        numeroStudenti++;
+       } else {
+        System.out.println("Il registro è pieno");
+       }
     }
     public void stampaStudenti() {
-        for(Studente studente : studenti) {
-            System.out.println(studente.getDettagliStudente());
+        for(int i=o; i<numeroStudenti; i++) {
+            System.out.println(studenti[i].getDettagliStudente());
         }
     }
 }
