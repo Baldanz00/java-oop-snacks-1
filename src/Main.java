@@ -24,6 +24,6 @@ public class Main {
        System.out.print("La tua risposta: ");
        String rispostaUtente = scanner.nextLine();
        domanda.stampaRisultato(rispostaUtente);
-       scanner.close();
+       
     }
 }

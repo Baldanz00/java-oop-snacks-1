@@ -11,7 +11,7 @@ public class DomandaQuiz {
     }
 
     public void stampaRisultato(String rispostaUtente) {
-        if(verificaRisposta(rispostaUtente)) {
+        if(verificoRisposta(rispostaUtente)) {
             System.out.println("Risposta corretta");
         } else {
             System.out.println("Risposta sbagliata");
